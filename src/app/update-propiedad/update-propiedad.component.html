@@ -1,0 +1,37 @@
+<h3>Actualizar Propiedad</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Pais</label>
+        <input type="text" class="form-control" id="pais" required [(ngModel)]="propetario.pais" name="pais">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Departamento/Estado</label>
+        <input type="text" class="form-control" id="departamento" required [(ngModel)]="propetario.departamento" name="departamento">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" required [(ngModel)]="propetario.ciudad" name="ciudad">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Direccion</label>
+        <input type="text" class="form-control" id="direccion" required [(ngModel)]="propetario.direccion" name="direccion">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Tamano (Km2)</label>
+        <input type="number" class="form-control" id="tamano" required [(ngModel)]="propetario.tamano" name="tamano">
+    </div>
+
+    <div class="form-group">
+        <label for="name">ID</label>
+        <input type="number" class="form-control" id="id" required [(ngModel)]="propetario.id" name="id">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

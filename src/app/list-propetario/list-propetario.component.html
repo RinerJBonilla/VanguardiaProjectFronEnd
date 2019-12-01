@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de propietarios</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>primer Nombre</th>
+            <th>segundo Nombre</th>
+            <th>primer Apellido</th>
+            <th>segundo Apellido</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let propietario of propetarios | async">
+            <td>{{propetario.primerNombre}}</td>
+            <td>{{propetario.segundoNombre}}</td>
+            <td>{{propetario.primerApellido}}</td>
+            <td>{{propetario.segundoApellido}}</td>
+            <td>{{propetario.id}}</td>
+            <td><button (click)="eliminarPropetario(propetario.id)" class="btn btn-danger">Eliminar</button>
+                <button (click)="detallesPropetario(propetario.id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

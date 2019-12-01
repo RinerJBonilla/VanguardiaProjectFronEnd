@@ -1,0 +1,21 @@
+<h2>Detalles de Tratado</h2> 
+
+<hr/>
+<div *ngIf="tratado">
+  <div>
+    <label><b>ID Propiedad: </b></label> {{tratado.idpropiedad}}
+  </div>
+  <div>
+    <label><b>ID Propietario: </b></label> {{tratado.idpropietario}}
+  </div>
+  <div>
+    <label><b>Fecha: </b></label> {{tratado.fecha}}
+  </div>
+  <div>
+    <label><b>ID: </b></label> {{tratado.id}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Lista de tratados</button><br>

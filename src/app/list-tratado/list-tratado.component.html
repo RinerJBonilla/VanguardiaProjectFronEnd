@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de tratados</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID Propiedad</th>
+            <th>ID Propietario</th>
+            <th>Fecha</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tratado of tratados | async">
+            <td>{{tratado.idpropiedad}}</td>
+            <td>{{tratado.idpropietario}}</td>
+            <td>{{tratado.fecha}}</td>
+            <td>{{tratado.id}}</td>
+            <td><button (click)="eliminarTratado(tratado.id)" class="btn btn-danger">Eliminar</button>
+                <button (click)="detallesTratado(tratado.id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+<h2>Detalles de Propiedad</h2> 
+
+<hr/>
+<div *ngIf="propiedad">
+  <div>
+    <label><b>Pais: </b></label> {{propiedad.pais}}
+  </div>
+  <div>
+    <label><b>Departamento/Estado: </b></label> {{propiedad.departamento}}
+  </div>
+  <div>
+    <label><b>Ciudad: </b></label> {{propiedad.ciudad}}
+  </div>
+  <div>
+    <label><b>Direccion: </b></label> {{propiedad.direccion}}
+  </div>
+  <div>
+    <label><b>Tamano (km2): </b></label> {{propiedad.tamano}}
+  </div>
+  <div>
+    <label><b>ID: </b></label> {{propiedad.id}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Lista de propiedades</button><br>

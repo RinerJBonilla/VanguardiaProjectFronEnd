@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <a routerLink="propietarios" class="nav-link" routerLinkActive="active">Lista de Propetarios</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="propietarioadd" class="nav-link" routerLinkActive="active">Agregar Propietario</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="propiedades" class="nav-link" routerLinkActive="active">Lista de Propiedades</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="propiedadadd" class="nav-link" routerLinkActive="active">Agregar Propiedad</a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="tratados" class="nav-link" routerLinkActive="active">Lista de Tratados</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="tratadoadd" class="nav-link" routerLinkActive="active">Agregar Tratado</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <span>Pre ALPHA 0.0.2</span>
+  </div>
+</footer>

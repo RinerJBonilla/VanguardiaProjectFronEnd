@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de propiedades</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Pais</th>
+            <th>Departamento/Estado</th>
+            <th>Ciudad</th>
+            <th>Direccion</th>
+            <th>Tamano(km2)</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let propidad of propiedades | async">
+            <td>{{propiedad.pais}}</td>
+            <td>{{propiedad.departamento}}</td>
+            <td>{{propiedad.ciudad}}</td>
+            <td>{{propiedad.direccion}}</td>
+            <td>{{propiedad.tamano}}</td>
+            <td>{{propiedad.id}}</td>
+            <td><button (click)="eliminarPropiedad(propiedad.id)" class="btn btn-danger">Eliminar</button>
+                <button (click)="detallesPropiedad(propiedad.id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

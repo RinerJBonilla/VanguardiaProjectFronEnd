@@ -1,0 +1,26 @@
+<h3>Actualizar Tratado</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">ID Propiedad</label>
+        <input type="number" class="form-control" id="idpropiedad" required [(ngModel)]="tratado.idpropiedad" name="idpropiedad">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">ID Propietario</label>
+          <input type="number" class="form-control" id="idpropietario" required [(ngModel)]="tratado.idpropietario" name="idpropietario">
+      </div>
+    
+      <div class="form-group">
+          <label for="name">Fecha</label>
+          <input type="date" class="form-control" id="fecha" required [(ngModel)]="tratado.fecha" name="fecha">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">ID</label>
+          <input type="number" class="form-control" id="id" required [(ngModel)]="tratado.id" name="id">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

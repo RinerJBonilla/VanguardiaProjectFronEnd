@@ -1,0 +1,24 @@
+<h2>Detalles de Propietario</h2> 
+
+<hr/>
+<div *ngIf="propetario">
+  <div>
+    <label><b>Primer Nombre: </b></label> {{propetario.primerNombre}}
+  </div>
+  <div>
+    <label><b>Segundo Nombre: </b></label> {{propetario.segundoNombre}}
+  </div>
+  <div>
+    <label><b>Primer Apellido: </b></label> {{propetario.primerApellido}}
+  </div>
+  <div>
+    <label><b>Segund Appellido: </b></label> {{propetario.segundoApellido}}
+  </div>
+  <div>
+    <label><b>ID: </b></label> {{propetario.id}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Lista de propietarios</button><br>
