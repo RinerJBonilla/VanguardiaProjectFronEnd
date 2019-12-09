@@ -3,17 +3,14 @@
 <hr/>
 <div *ngIf="tratado">
   <div>
-    <label><b>ID Propiedad: </b></label> {{tratado.idpropiedad}}
+    <label><b>ID Propiedad: </b></label> {{tratado.propiedad}}
   </div>
   <div>
-    <label><b>ID Propietario: </b></label> {{tratado.idpropietario}}
+    <label><b>ID Propietario: </b></label> {{tratado.propietario}}
   </div>
   <div>
-    <label><b>Fecha: </b></label> {{tratado.fecha}}
+    <label><b>Fecha: </b></label> {{tratado.fecha | date: 'dd/MM/yyyy'}}
   </div>
-  <div>
-    <label><b>ID: </b></label> {{tratado.id}}
-  </div>  
 </div>
 
 <br>

@@ -1,7 +1,8 @@
 export class Propietario{
+    _id: string;
     primerNombre: string;
     segundoNombre: string;
     primerApellido: string;
     segundoApellido: string;
-    id: number;
+    identidad: String;
 }

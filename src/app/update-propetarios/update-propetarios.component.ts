@@ -10,7 +10,7 @@ import {PropetarioService} from '../propetario.service';
 })
 export class UpdatePropetariosComponent implements OnInit {
 
-  id: number;
+  id: string;
   propetario: Propietario;
 
   constructor(private route: ActivatedRoute, private router: Router,

@@ -10,18 +10,18 @@
             <th>segundo Nombre</th>
             <th>primer Apellido</th>
             <th>segundo Apellido</th>
-            <th>ID</th>
+            <th>Identidad</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let propietario of propetarios | async">
-            <td>{{propetario.primerNombre}}</td>
-            <td>{{propetario.segundoNombre}}</td>
-            <td>{{propetario.primerApellido}}</td>
-            <td>{{propetario.segundoApellido}}</td>
-            <td>{{propetario.id}}</td>
-            <td><button (click)="eliminarPropetario(propetario.id)" class="btn btn-danger">Eliminar</button>
-                <button (click)="detallesPropetario(propetario.id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
+          <tr *ngFor="let propietario of propietarioList">
+            <td>{{propietario.primerNombre}}</td>
+            <td>{{propietario.segundoNombre}}</td>
+            <td>{{propietario.primerApellido}}</td>
+            <td>{{propietario.segundoApellido}}</td>
+            <td>{{propietario.identidad}}</td>
+            <td><button (click)="eliminarPropetario(propietario._id)" class="btn btn-danger">Eliminar</button>
+                <button (click)="detallesPropetario(propietario._id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
             </td>
           </tr>
         </tbody>

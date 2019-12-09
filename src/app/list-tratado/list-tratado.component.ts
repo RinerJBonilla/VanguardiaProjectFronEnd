@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 })
 export class ListTratadoComponent implements OnInit {
 
-  tratados: Observable<Tratado[]>;
+  tratados: Tratado[];
 
   constructor(private tratadoService: TratadoService,
     private router: Router) { }
@@ -22,10 +22,14 @@ export class ListTratadoComponent implements OnInit {
   }
 
   reloadData(){
-    this.tratados = this.tratadoService.getListTratados();
+    this.tratadoService.getListTratados()
+    .subscribe(tratados => {
+      this.tratados = tratados;
+      console.log(tratados);
+    });
   }
 
-  eliminarTratado(id: number){
+  eliminarTratado(id: string){
     this.tratadoService.deleteTratado(id)
       .subscribe(
         data => {

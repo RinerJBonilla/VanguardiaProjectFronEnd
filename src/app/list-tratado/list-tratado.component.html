@@ -9,17 +9,15 @@
             <th>ID Propiedad</th>
             <th>ID Propietario</th>
             <th>Fecha</th>
-            <th>ID</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let tratado of tratados | async">
-            <td>{{tratado.idpropiedad}}</td>
-            <td>{{tratado.idpropietario}}</td>
-            <td>{{tratado.fecha}}</td>
-            <td>{{tratado.id}}</td>
-            <td><button (click)="eliminarTratado(tratado.id)" class="btn btn-danger">Eliminar</button>
-                <button (click)="detallesTratado(tratado.id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
+          <tr *ngFor="let tratado of tratados">
+            <td>{{tratado.propiedad}}</td>
+            <td>{{tratado.propietario}}</td>
+            <td>{{tratado.fecha | date: 'dd/MM/yyyy' }}</td>
+            <td><button (click)="eliminarTratado(tratado._id)" class="btn btn-danger">Eliminar</button>
+                <button (click)="detallesTratado(tratado._id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
             </td>
           </tr>
         </tbody>

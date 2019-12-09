@@ -17,6 +17,7 @@ export class CreatePropiedadComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    this.propiedad = new Propiedad();
   }
 
   nuevaPropiedad(): void {
@@ -26,11 +27,13 @@ export class CreatePropiedadComponent implements OnInit {
 
   save(){
     this.propiedadService.createPropiedad(this.propiedad)
-     .subscribe(data => console.log(data),
-     error => console.log(error));
-    
-    this.propiedad = new Propiedad();
-    this.gotoList();
+     .subscribe(response => {
+       console.table(response);
+       this.gotoList();
+     },
+     error => {
+       console.log(error);
+     });
   }
 
   onSubmit(){

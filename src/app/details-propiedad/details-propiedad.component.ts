@@ -11,7 +11,7 @@ import {ListPropiedadComponent} from '../list-propiedad/list-propiedad.component
 })
 export class DetailsPropiedadComponent implements OnInit {
 
-  id: number;
+  id: string;
   propiedad: Propiedad;
 
   constructor(private route: ActivatedRoute, private router: Router,

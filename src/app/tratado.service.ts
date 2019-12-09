@@ -7,11 +7,11 @@ import {Observable} from 'rxjs';
 })
 export class TratadoService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/tratados';
+  private baseUrl = 'http://localhost:3000/tratados';
 
   constructor(private http: HttpClient) { }
 
-  getTratado(id: number): Observable<any>{
+  getTratado(id: string): Observable<any>{
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
@@ -19,12 +19,12 @@ export class TratadoService {
     return this.http.post(`${this.baseUrl}`, tratado);
   }
 
-  updateTratado(id: number, value: any): Observable<Object>{
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+  updateTratado(id: string, value: any): Observable<Object>{
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
   }
 
-  deleteTratado(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  deleteTratado(id: string): any {
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
   getListTratados(): Observable<any> {

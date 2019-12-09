@@ -11,7 +11,7 @@ import {ListPropetarioComponent} from '../list-propetario/list-propetario.compon
 })
 export class DetailsPropetarioComponent implements OnInit {
 
-  id: number;
+  id: string;
   propetario: Propietario;
 
   constructor(private route: ActivatedRoute, private router: Router,

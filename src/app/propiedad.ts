@@ -1,5 +1,5 @@
 export class Propiedad {
-    id: number;
+    _id: string;
     pais: string;
     departamento: string;
     ciudad: string;

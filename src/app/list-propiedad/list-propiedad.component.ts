@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 })
 export class ListPropiedadComponent implements OnInit {
 
-  propiedades: Observable<Propiedad[]>;
+  propiedades: Propiedad[];
 
   constructor(private propiedadService: PropiedadService,
     private router: Router) { }
@@ -22,10 +22,14 @@ export class ListPropiedadComponent implements OnInit {
   }
 
   reloadData(){
-    this.propiedades = this.propiedadService.getListPropiedades();
+    this.propiedadService.getListPropiedades()
+    .subscribe(propiedades => {
+      this.propiedades = propiedades;
+      console.log(propiedades);
+    });
   }
 
-  eliminarPropiedad(id: number){
+  eliminarPropiedad(id: string){
     this.propiedadService.deletePropiedad(id)
       .subscribe(
         data => {
@@ -35,7 +39,7 @@ export class ListPropiedadComponent implements OnInit {
         error => console.log(error));
   }
 
-  detallesPropiedad(id: number){
+  detallesPropiedad(id: string){
     this.router.navigate(['propiedaddetails',id]);
   }
 

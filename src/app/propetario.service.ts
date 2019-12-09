@@ -1,30 +1,31 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Propietario} from './propetario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PropetarioService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/propetarios';
+  private baseUrl = 'http://localhost:3000/propietarios';
 
   constructor(private http: HttpClient) { }
 
-  getPropetario(id: number): Observable<any>{
+  getPropetario(id: string): Observable<any>{
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createPropetario(propetario: Object): Observable<Object>{
-    return this.http.post(`${this.baseUrl}`, propetario);
+  createPropetario(propietario: Object): Observable<Object>{
+    return this.http.post(`${this.baseUrl}`, propietario);
   }
 
-  updatePropetario(id: number, value: any): Observable<Object>{
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+  updatePropetario(id: string, value: any): Observable<Object>{
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
   }
 
-  deletePropetario(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  deletePropetario(id: string): any {
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
   getListPropetarios(): Observable<any> {

@@ -10,7 +10,7 @@ import {PropiedadService} from '../propiedad.service';
 })
 export class UpdatePropiedadComponent implements OnInit {
 
-  id: number;
+  id: string;
   propiedad: Propiedad;
 
   constructor(private route: ActivatedRoute, private router: Router,

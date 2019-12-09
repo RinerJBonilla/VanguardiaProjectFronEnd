@@ -1,6 +1,6 @@
 export class Tratado{
-    id: number;
-    idpropiedad: number;
-    idpropietario: number;
+    _id: string;
+    propiedad: string;
+    propietario: string;
     fecha: Date;
 }

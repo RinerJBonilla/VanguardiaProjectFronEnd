@@ -11,7 +11,7 @@ import {ListTratadoComponent} from '../list-tratado/list-tratado.component';
 })
 export class DetailsTratadoComponent implements OnInit {
 
-  id: number;
+  id: string;
   tratado: Tratado;
 
   constructor(private route: ActivatedRoute, private router: Router,

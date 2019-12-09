@@ -7,11 +7,11 @@ import {Observable} from 'rxjs';
 })
 export class PropiedadService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/propiedades';
+  private baseUrl = 'http://localhost:3000/propiedades';
 
   constructor(private http: HttpClient) { }
 
-  getPropiedad(id: number): Observable<any>{
+  getPropiedad(id: string): Observable<any>{
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
@@ -19,12 +19,12 @@ export class PropiedadService {
     return this.http.post(`${this.baseUrl}`, propiedad);
   }
 
-  updatePropiedad(id: number, value: any): Observable<Object>{
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+  updatePropiedad(id: string, value: any): Observable<Object>{
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
   }
 
-  deletePropiedad(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  deletePropiedad(id: string): any {
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
   getListPropiedades(): Observable<any> {

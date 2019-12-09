@@ -17,6 +17,7 @@ export class CreatePropetarioComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    this.propetario = new Propietario();
   }
 
   nuevoPropetario(): void {
@@ -26,11 +27,13 @@ export class CreatePropetarioComponent implements OnInit {
 
   save(){
     this.propetarioService.createPropetario(this.propetario)
-     .subscribe(data => console.log(data),
-     error => console.log(error));
-    
-    this.propetario = new Propietario();
-    this.gotoList();
+     .subscribe(response => {
+       console.table(response);
+       this.gotoList();
+     },
+     error => {
+       console.log(error);
+     });
   }
 
   onSubmit(){

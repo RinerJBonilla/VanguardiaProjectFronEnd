@@ -10,7 +10,7 @@ import {TratadoService} from '../tratado.service';
 })
 export class UpdateTratadoComponent implements OnInit {
 
-  id: number;
+  id: string;
   tratado: Tratado;
 
   constructor(private route: ActivatedRoute, private router: Router,
